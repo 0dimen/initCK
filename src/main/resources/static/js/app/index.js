@@ -1,6 +1,6 @@
-var main = { // index.js의 유효 범위를 만들기 위해 사용. (Ex. save()가 다른 js 파일에 있을 경우, 덮어씌워질 수 있다. 객체 안에서만 해당 함수가 유효하게 만든다.)
+let main = { // index.js의 유효 범위를 만들기 위해 사용. (Ex. save()가 다른 js 파일에 있을 경우, 덮어씌워질 수 있다. 객체 안에서만 해당 함수가 유효하게 만든다.)
     init : function () {
-        var _this = this;
+        let _this = this;
         $('#btn-save').on('click', function () {
             _this.save();
         });
@@ -16,7 +16,7 @@ var main = { // index.js의 유효 범위를 만들기 위해 사용. (Ex. save(
 
     },
     save : function () {
-        var data = {
+        let data = {
             title: $('#title').val(),
             author: $('#author').val(),
             content: $('#content').val()
@@ -36,12 +36,12 @@ var main = { // index.js의 유효 범위를 만들기 위해 사용. (Ex. save(
         });
     },
     update : function () {
-        var data = {
+        let data = {
             title: $('#title').val(),
             content: $('#content').val()
         };
 
-        var id = $('#id').val();
+        let id = $('#id').val();
 
         $.ajax({
             type: 'PUT', //수정
@@ -58,7 +58,7 @@ var main = { // index.js의 유효 범위를 만들기 위해 사용. (Ex. save(
     },
 
     delete : function() {
-        var id = $('#id').val();
+        let id = $('#id').val();
 
         $.ajax({
             type: 'DELETE', //수정
