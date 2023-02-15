@@ -15,7 +15,7 @@ cache: # 같은 의존성을 다음 배포 때 부터 받지 않도록 함.
     - '#HOME/.gradle'
 
 # master branch에 푸시 되었을 때 수행하는 명령어. clean & build 수행
-script: "./gradlew clean build"
+script: "./gradle clean build"
 
 # CI 실행 완료 시 메일로 자동 알람
 notifications:
